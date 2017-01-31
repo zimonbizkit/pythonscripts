@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import Queue
 import sys
+from time import sleep
 class Job(object):
     def __init__(self, priority, description):
         self.priority = priority
@@ -27,4 +28,4 @@ while _in != 'end':
 while not q.empty():
     next_job = q.get()
     print 'Processing job:', next_job.description
-                                                                    
+    sleep(0.5)                                                                  
